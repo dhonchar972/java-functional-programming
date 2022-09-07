@@ -1,0 +1,24 @@
+(Apple apple) -> apple.getWeight()              Apple::getWeight
+() -> Thread.currentThread().dumpStack()        Thread.currentThread()::dumpStack
+(str, i) -> str.substring(i)                    String::substring
+(String s) -> s.toUpperCase()                   String::toUpperCase.
+(String s) -> System.out.println(s)             System.out::println
+(String s) -> this.isValidName(s)               this::isValidName
+Integer::parseInt
+String::length
+expensiveTransaction::getValue // class instance method reference
+ClassName::new
+
+public interface TriFunction<T, U, V, R> {
+    R apply(T t, U u, V v);
+}
+RGB::new
+
+inventory.sort(comparing(Apple::getWeight)
+         .reversed()
+         .thenComparing(Apple::getCountry)) // secont parameter for comparing
+
+Predicate<Apple> notRedApple = redApple.negate(); // all NOT red apples
+
+Predicate<Apple> redAndHeavyAppleOrGreen = redApple.and(apple -> apple.getWeight() > 150)
+                                                   .or(apple -> GREEN.equals(a.getColor()));

@@ -1,0 +1,17 @@
+List<String> lowCaloricDishesName = menu.stream()
+                                        .filter(d -> d.getCalories() < 400)
+                                        .sorted(comparing(Dish::getCalories))
+                                        .map(Dish::getName)
+                                        .collect(toList());
+
+List<String> lowCaloricDishesName = menu.parallelStream()
+                                        .filter(d -> d.getCalories() < 400)
+                                        .sorted(comparing(Dish::getCalories))
+                                        .map(Dish::getName)
+                                        .collect(toList());
+
+List<Integer> numbers = Arrays.asList(1, 2, 1, 3, 3, 2, 4);
+numbers.stream()
+       .filter(i -> i % 2 == 0)
+       .distinct() // remove duplicates
+       .forEach(System.out::println);
