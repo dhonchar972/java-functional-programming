@@ -63,6 +63,7 @@ public class Main {
             // void onComplete()
             // void onError(Throwable throwable)
             // void onNext(T item)
+            // void onSubscribe(Subscription subscription);
 
         // CompletableFuture
 //        var executorService = Executors.newFixedThreadPool(10);

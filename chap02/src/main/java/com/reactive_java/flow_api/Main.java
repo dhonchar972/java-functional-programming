@@ -6,6 +6,15 @@ package com.reactive_java.flow_api;
  */
 public class Main {
     public static void main(String[] args) {
-
+//        @FunctionalInterface
+//        public interface Publisher<T> {
+//            void subscribe(Subscriber<? super T> s);
+//        }
+//        public interface Subscriber<T> {
+//            void onSubscribe(Subscription s);
+//            void onNext(T t);
+//            void onError(Throwable t);
+//            void onComplete();
+//        }
     }
 }
